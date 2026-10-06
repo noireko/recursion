@@ -1,9 +1,3 @@
-function mergeSort (arr) {
-    for (let i = 1; i <= arr.length; i = i - arr.length / 2) {
-        console.log(arr[i]);
-    }
-}
-
 function mergeSort(arr) {
   if (arr.length <= 1) return arr;
 
