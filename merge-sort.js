@@ -27,3 +27,13 @@ function iteracionRec (n) {
         return n + iteracionRec(n - 1);
     }
 }
+
+
+function arrayRec (arr) {
+    let resultado = [];
+    if (arr.length === 1) {
+        return arr[0];
+    } else {
+        return resultado.push(arr[0] * arrayRec(arr.slice(1)));
+    }
+}
