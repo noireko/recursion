@@ -28,12 +28,12 @@ function iteracionRec (n) {
     }
 }
 
+function multiArray(arr) {
+  if (arr.length === 0) return 1;
+  return arr[0] * multiArray(arr.slice(1));
+}
 
-function arrayRec (arr) {
-    let resultado = [];
-    if (arr.length === 1) {
-        return arr[0];
-    } else {
-        return resultado.push(arr[0] * arrayRec(arr.slice(1)));
-    }
+function reverse(str) {
+  if (str.length === 0) return "";
+  return str.slice(-1) + reverse(str.slice(0, -1));
 }
