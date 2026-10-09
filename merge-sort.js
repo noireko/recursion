@@ -41,7 +41,9 @@ function reverse(str) {
 function isPalindrome (str) {
     if (str[0] !== str[str.length - 1]) {
         return false;
+    } else if (str.slice(-1) + reverse(str.slice(0, -1)) === str) {
+        return true
     } else {
-
-    }
-}
+        return false
+    };
+};
