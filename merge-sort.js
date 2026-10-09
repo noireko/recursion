@@ -19,3 +19,11 @@ function mergeSort(arr) {
 
     return [...resultado, ...izq, ...der];
 }
+
+function iteracionRec (n) {
+    if (n === 0) {
+        return 1;
+    } else {
+        return n + iteracionRec(n - 1);
+    }
+}
