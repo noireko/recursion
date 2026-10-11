@@ -20,7 +20,7 @@ function mergeSort(arr) {
     return [...resultado, ...izq, ...der];
 }
 
-function iteracionRec (n) {
+function iteracionRec(n) {
     if (n === 0) {
         return 1;
     } else {
@@ -29,22 +29,28 @@ function iteracionRec (n) {
 }
 
 function multiArray(arr) {
-  if (arr.length === 0) return 1;
-  return arr[0] * multiArray(arr.slice(1));
+    if (arr.length === 0) return 1;
+    return arr[0] * multiArray(arr.slice(1));
 }
 
 function reverse(str) {
-  if (str.length === 0) return "";
-  return str.slice(-1) + reverse(str.slice(0, -1));
+    if (str.length === 0) return "";
+    return str.slice(-1) + reverse(str.slice(0, -1));
 }
 
 function isPalindrome(str) {
-  if (str.length === 0) {
-    return true;
-  } else if (str.length === 1) {
-    return true;
-  } else if (str[0] !== str[str.length - 1]) {
-    return false;
-  }
-  return isPalindrome(str.slice(1, -1));
+    if (str.length === 0) {
+        return true;
+    } else if (str.length === 1) {
+        return true;
+    } else if (str[0] !== str[str.length - 1]) {
+        return false;
+    }
+    return isPalindrome(str.slice(1, -1));
+}
+
+function sumDigits(num) {
+    if (num % 10 === 0) return num / 10;
+    const restoNum = sumDigits(Math.floor(num / 10));
+    return num % 10 + restoNum;
 }
