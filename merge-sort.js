@@ -67,5 +67,5 @@ function power(base, exp) {
 
 function countDown(n) {
     if (n === 0) return [];
-    return countDown(n - 1);
+    return [n].concat(countDown(n - 1));
 }
