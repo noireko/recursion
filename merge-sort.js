@@ -64,3 +64,8 @@ function power(base, exp) {
     if (exp === 0) return 1;
     return base * power(base, exp - 1)
 }
+
+function countDown(n) {
+    if (n === 0) return [];
+    return countDown(n - 1);
+}
