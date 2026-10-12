@@ -65,7 +65,7 @@ function power(base, exp) {
     return base * power(base, exp - 1)
 }
 
-function countDown(n) {
-    if (n === 0) return [];
-    return [n].concat(countDown(n - 1))
+function countUp(n) {
+  if (n === 0) return [];
+  return [...countUp(n - 1), n]
 }
