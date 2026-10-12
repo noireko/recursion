@@ -28,6 +28,11 @@ function iteracionRec(n) {
     }
 }
 
+function factorial(n) {
+  if (n === 0) return 1;
+  return n * factorial(n - 1);
+}
+
 function multiArray(arr) {
     if (arr.length === 0) return 1;
     return arr[0] * multiArray(arr.slice(1));
@@ -50,7 +55,11 @@ function isPalindrome(str) {
 }
 
 function sumDigits(num) {
-    if (num % 10 === 0) return num / 10;
+    if (num === 0) return num;
     const restoNum = sumDigits(Math.floor(num / 10));
     return num % 10 + restoNum;
+}
+
+function power(base, exp) {
+
 }
