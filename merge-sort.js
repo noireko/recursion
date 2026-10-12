@@ -69,3 +69,11 @@ function countUp(n) {
   if (n === 0) return [];
   return [...countUp(n - 1), n]
 }
+
+function includes(arr, target) {
+    if (arr === "") return false;
+    if (includes(arr.shift() === target)) {
+        return true
+    }
+    return arr;
+}
