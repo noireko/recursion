@@ -71,9 +71,7 @@ function countUp(n) {
 }
 
 function includes(arr, target) {
-    if (arr === "") return false;
-    if (includes(arr.shift() === target)) {
-        return true
-    }
-    return arr;
+  if (arr.length === 0) return false;
+  if (arr[0] === target) return true;
+  return includes(arr.slice(1), target);
 }
