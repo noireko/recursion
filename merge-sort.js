@@ -66,12 +66,20 @@ function power(base, exp) {
 }
 
 function countUp(n) {
-  if (n === 0) return [];
-  return [...countUp(n - 1), n]
+    if (n === 0) return [];
+    return [...countUp(n - 1), n]
 }
 
 function includes(arr, target) {
-  if (arr.length === 0) return false;
-  if (arr[0] === target) return true;
-  return includes(arr.slice(1), target);
+    if (arr.length === 0) return false;
+    if (arr[0] === target) return true;
+    return includes(arr.slice(1), target);
+}
+
+function countOccurrances(arr, target) {
+  if (arr.length === 0) return 0;
+  if (arr[0] === target) {
+    return 1 + countOccurrances(arr.slice(1), target);
+  }
+  return 0 + countOccurrances(arr.slice(1), target);
 }
